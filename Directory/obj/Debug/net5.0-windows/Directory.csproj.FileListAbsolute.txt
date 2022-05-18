@@ -23,3 +23,4 @@ C:\Users\Sedma\Documents\GitHub\Directory\Directory\bin\Debug\net5.0-windows\run
 C:\Users\Sedma\Documents\GitHub\Directory\Directory\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Sedma\Documents\GitHub\Directory\Directory\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Sedma\Documents\GitHub\Directory\Directory\obj\Debug\net5.0-windows\Directory.csproj.CopyComplete
+C:\Users\Sedma\Documents\GitHub\Directory\Directory\obj\Debug\net5.0-windows\Directory.Properties.Resources.resources

@@ -20,8 +20,7 @@ namespace Directory
 
         public Form1()
         {
-            InitializeComponent();
-           
+            InitializeComponent();    
         }
 
 
@@ -60,12 +59,12 @@ namespace Directory
 
         private void SetListBoxItem(ListBox refresher,string field, string filter=null) {
 
-
-            SqlCommand dataAdapter = new SqlCommand(
+            
+            SqlCommand datacmd = new SqlCommand(
                 $"SELECT DISTINCT {field} FROM Direct {filter}",
                 connection);
 
-            SqlDataReader reader = dataAdapter.ExecuteReader();
+            SqlDataReader reader = datacmd.ExecuteReader();
 
 
             refresher.Items.Clear();
@@ -75,6 +74,28 @@ namespace Directory
             reader.Close();
         }
 
-       
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+             
+            SqlCommand cmd = new SqlCommand(
+               $"INSERT INTO Direct (Country,Region,City) VALUES " +
+               $"('{textBoxCountry.Text}','{textBoxRegion.Text}','{textBoxCity.Text}') ",
+               connection);
+
+            cmd.ExecuteNonQuery();
+
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+
+            SqlCommand cmd = new SqlCommand(
+               $"DELETE FROM Direct  WHERE(Country='{textBoxCountry.Text}' " +
+               $"AND Region = '{textBoxRegion.Text}' " +
+               $"AND City='{textBoxCity.Text}')  ",
+               connection);
+
+            cmd.ExecuteNonQuery();
+        }
     }
 }
